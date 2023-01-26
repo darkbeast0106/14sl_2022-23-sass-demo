@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "sass": "^1.57.1"
+  },
+  "scripts": {
+    "build": "sass --style=compressed ./src/main.scss ./dist/main.css",
+    "dev": "sass --watch ./src/main.scss ./dist/main.css"
+  }
+}

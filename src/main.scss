@@ -1,0 +1,43 @@
+@use 'variables' as v;
+@use 'fonts';
+
+* {
+    margin: 0;
+    font-family: 'Roboto', monospace;
+}
+
+header {
+    background-color: v.$headerBackgroundColor;
+    color: v.$headerTextColor;
+    height: v.$headerHeight;
+    nav {
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            li {
+                width: v.$navItemWidth;
+                a {
+                    text-align: center;
+                    display: block;
+                    line-height: v.$headerHeight;
+                    height: v.$headerHeight;
+                    color: v.$headerTextColor;
+                    text-decoration: none;
+                    &:hover {
+                        background-color: adjust-color($color: v.$headerBackgroundColor, $lightness: 30%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: v.$footerBackgroundColor;
+    color: v.$footerTextColor;
+    a {
+        color: v.$footerTextColor;
+    }
+}
